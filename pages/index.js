@@ -1,28 +1,25 @@
 import Head from "next/head";
-import { Component } from "react";
+import Layout from "../components/layout";
+import { useEffect } from "react";
+import { animate } from "../components/animate";
 import { attributes, react as HomeContent } from "../content/home.md";
 
-export default class Home extends Component {
-  render() {
-    let { title, cats } = attributes;
-    return (
-      <>
-        <Head>
-          <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-        </Head>
-        <article>
+export default function Home() {
+  let { title } = attributes;
+
+  useEffect(() => {
+    animate(null, "home");
+  }, []);
+
+  return (
+    <Layout>
+      <article>
+        <img src="" alt="" />
+        <div>
           <h1>{title}</h1>
           <HomeContent />
-          <ul>
-            {cats.map((cat, k) => (
-              <li key={k}>
-                <h2>{cat.name}</h2>
-                <p>{cat.description}</p>
-              </li>
-            ))}
-          </ul>
-        </article>
-      </>
-    );
-  }
+        </div>
+      </article>
+    </Layout>
+  );
 }
