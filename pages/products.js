@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import Layout from "../components/layout";
 import { useEffect } from "react";
 import { animate } from "../components/animate";
-import ProductList from "../components/product/productlist";
+import ProductList from "../components/product/ProductList";
 import * as styles from "../styles/products.module.scss";
 
 const productsDirectory = path.join(process.cwd(), "content", "products");
