@@ -16,21 +16,6 @@ export function animate(currentRoute, nextRoute) {
     endPosition = { top: "55vh", left: "50vw", scale: 2 }; // scale to 200%
   }
 
-  // let animationProperties = {
-  //   ...endPosition,
-  //   duration: 0.8,
-  //   ease: "expo.inOut",
-  //   onComplete: () => {
-  //     lastPosition = { ...endPosition };
-  //   },
-  // };
-
-  // if (nextRoute === "productPage") {
-  //   animationProperties.scale = 2;
-  // }
-
-  // gsap.fromTo(".green", startPosition, animationProperties);
-
   gsap.fromTo(".green", startPosition, {
     ...endPosition,
     duration: 0.8,

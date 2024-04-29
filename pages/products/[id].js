@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import Layout from "../../components/layout";
 import { useEffect } from "react";
 import { animate } from "../../components/animate";
+import ReactMarkdown from "react-markdown";
 import * as styles from "../../styles/products.module.scss";
 
 const productsDirectory = path.join(process.cwd(), "content", "products");
@@ -25,6 +26,7 @@ export default function Product({ product }) {
     <Layout>
       <h1>{product.title}</h1>
       <div>{product.description}</div>
+      <ReactMarkdown>{product.content}</ReactMarkdown>
     </Layout>
   );
 }
