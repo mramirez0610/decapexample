@@ -13,10 +13,32 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Publish Date", name: "date", widget: "datetime" }
+          - { label: "Image", name: "image", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Cats"
-            name: "cats"
-            widget: list
-            fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
+      - label: "About"
+        name: "about"
+        file: "content/about.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
+          - { label: "Image", name: "image", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Products"
+        name: "products"
+        folder: "content/products"
+        create: true
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Price", name: "price", widget: "number" }
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Featured", name: "featured", widget: "boolean" }
+          - { label: "Tags", name: "tags", widget: "list" }
+          - {
+              label: "Categories",
+              name: "categories",
+              widget: "relation",
+              collection: "categories",
+              multiple: true,
+            }

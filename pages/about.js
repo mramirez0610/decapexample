@@ -22,6 +22,9 @@ export default function About() {
           </li>
         ))}
       </ul>
+      <div>
+        <AboutContent />
+      </div>
     </Layout>
   );
 }

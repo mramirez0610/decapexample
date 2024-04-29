@@ -20,10 +20,31 @@ p {
   margin-bottom: 16px;
 }
 .green {
-  background: linear-gradient(45deg, #1aff1a, #00ff00, #00b300);
+  // background: linear-gradient(45deg, #1aff1a, #00ff00, #00b300);
+  background: radial-gradient(circle, darkblue, orange);
   filter: blur(20px);
   width: 500px;
   height: 500px;
   border-radius: 50%;
   position: fixed;
+  background-size: 200% 200%;
+  animation: gradient 20s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 150% 0;
+  }
+  25% {
+    background-position: 100% 100%;
+  }
+  50% {
+    background-position: 0 100%;
+  }
+  75% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 150% 0;
+  }
 }

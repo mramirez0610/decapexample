@@ -9,15 +9,32 @@ export function animate(currentRoute, nextRoute) {
   if (!currentRoute && nextRoute === "home") {
     endPosition = { top: "100vh", left: "0vw" };
   } else if (currentRoute === "home" && nextRoute === "products") {
-    endPosition = { top: "50vh", left: "50vw" };
+    endPosition = { top: "55vh", left: "50vw" };
   } else if (currentRoute === "products" && nextRoute === "about") {
     endPosition = { top: "100vh", left: "100vw" };
+  } else if (currentRoute === "products" && nextRoute === "productPage") {
+    endPosition = { top: "55vh", left: "50vw", scale: 2 }; // scale to 200%
   }
+
+  // let animationProperties = {
+  //   ...endPosition,
+  //   duration: 0.8,
+  //   ease: "expo.inOut",
+  //   onComplete: () => {
+  //     lastPosition = { ...endPosition };
+  //   },
+  // };
+
+  // if (nextRoute === "productPage") {
+  //   animationProperties.scale = 2;
+  // }
+
+  // gsap.fromTo(".green", startPosition, animationProperties);
 
   gsap.fromTo(".green", startPosition, {
     ...endPosition,
-    duration: 1,
-    ease: "power2.inOut",
+    duration: 0.8,
+    ease: "expo.inOut",
     transform: "translate(-50%, -50%)",
     onComplete: () => {
       lastPosition = { ...endPosition };

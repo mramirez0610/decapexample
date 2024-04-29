@@ -1,7 +1,9 @@
 .navbar {
   width: auto;
   height: 8vh;
-  background-color: #fff;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   display: flex;
   justify-content: center;
   border-bottom: 0.5px solid grey;
@@ -27,9 +29,12 @@
   justify-content: center;
   height: 92vh;
   position: relative;
+
   .main {
     width: 85%;
-    background-color: #fff;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     padding: 4%;
     border: 0.5px solid grey;
     position: relative;
