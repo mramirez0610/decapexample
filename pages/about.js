@@ -14,14 +14,6 @@ export default function About() {
     <Layout>
       <h1>{title}</h1>
       <p>This is the about page</p>
-      <ul>
-        {tests.map((test, m) => (
-          <li key={m}>
-            <h2>{test.item}</h2>
-            <p>{test.word}</p>
-          </li>
-        ))}
-      </ul>
       <div>
         <AboutContent />
       </div>
