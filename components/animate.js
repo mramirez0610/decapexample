@@ -1,22 +1,27 @@
 import gsap from "gsap";
 
-let lastPosition = { top: "120vh", left: "-50vw" }; // initial position slightly off-screen
+let lastPosition = { top: "140vh", left: "-50vw", scale: 1 }; // initial position slightly off-screen
 
 export function animate(currentRoute, nextRoute) {
   let startPosition = { ...lastPosition };
-  let endPosition;
+  let endPosition = { ...lastPosition };
 
   if (!currentRoute && nextRoute === "home") {
-    endPosition = { top: "100vh", left: "0vw" };
+    endPosition = { top: "100vh", left: "0vw", scale: 1 };
   } else if (currentRoute === "home" && nextRoute === "products") {
-    endPosition = { top: "55vh", left: "50vw" };
+    endPosition = { top: "55vh", left: "50vw", scale: 1 };
   } else if (currentRoute === "products" && nextRoute === "about") {
-    endPosition = { top: "100vh", left: "100vw" };
+    endPosition = { top: "100vh", left: "100vw", scale: 1 };
   } else if (currentRoute === "products" && nextRoute === "productPage") {
-    endPosition = { top: "55vh", left: "50vw", scale: 2 }; // scale to 200%
+    endPosition = { top: "55vh", left: "50vw", scale: 4 };
   }
 
-  gsap.fromTo(".green", startPosition, {
+  if (!endPosition.scale) {
+    endPosition.scale = lastPosition.scale;
+  }
+
+  gsap.to(".green", {
+    ...startPosition,
     ...endPosition,
     duration: 0.8,
     ease: "expo.inOut",

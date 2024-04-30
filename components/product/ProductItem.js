@@ -7,11 +7,12 @@ export default function ProductItem({ product }) {
   const handleClick = () => {
     animate("products", "productPage");
   };
+
   return (
-    <div className={styles.product} onClick={handleClick}>
+    <div className={styles.product}>
       <img className={styles.img} src={product.img} />
 
-      <Link href={`/products/${product.id}`}>
+      <Link href={`/products/${product.id}`} onClick={handleClick}>
         <h2>{product.title}</h2>
       </Link>
       <p>{product.description}</p>
