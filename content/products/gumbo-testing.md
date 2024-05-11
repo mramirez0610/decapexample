@@ -1,6 +1,6 @@
 ---
-title: gumbo testing
-description: haayyyyyy
+title: hellfire
+description: black midi album
 price: 300
 image: img/hellfire-discogs.jpg
 ---
