@@ -24,6 +24,7 @@ export default function Products({ products }) {
 
   return (
     <Layout>
+      <h1>Products</h1>
       <ProductList products={products} />
     </Layout>
   );

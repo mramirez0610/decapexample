@@ -1,12 +1,16 @@
 .productList {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
   .product {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     .img {
-      width: 85%;
-      height: 10%;
+      width: 20%;
     }
   }
 }
