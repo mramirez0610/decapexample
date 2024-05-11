@@ -19,6 +19,24 @@
       list-style: none;
       a {
         text-decoration: none;
+        color: black;
+        // position: relative;
+
+        // &::after {
+        //   content: "";
+        //   position: absolute;
+        //   width: 0;
+        //   height: 2px;
+        //   bottom: 0;
+        //   left: 0;
+        //   background-color: #000;
+        //   transition: width 0.3s;
+        // }
+
+        // &:hover::after {
+        //   width: 100%;
+        //   transition: width 20ms;
+        // }
       }
     }
   }
@@ -29,7 +47,7 @@
   justify-content: center;
 
   position: relative;
-  margin: 8% auto;
+  margin: 6% auto;
 
   .main {
     width: 85%;
