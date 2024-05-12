@@ -21,7 +21,6 @@ export default function Product({ product }) {
     <Layout>
       <Link href="/products">Back</Link>
       <h1>{product.title}</h1>
-
       <ReactMarkdown>{product.content}</ReactMarkdown>
     </Layout>
   );

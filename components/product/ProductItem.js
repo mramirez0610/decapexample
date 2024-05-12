@@ -10,9 +10,9 @@ export default function ProductItem({ product }) {
 
   return (
     <div className={styles.product}>
-      <img className={styles.img} src={product.image} />
-
       <Link href={`/products/${product.id}`} onClick={handleClick}>
+        <img className={styles.img} src={product.image} />
+
         <h2>{product.title}</h2>
       </Link>
     </div>

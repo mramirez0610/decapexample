@@ -1,16 +1,26 @@
 .productList {
   display: flex;
-  align-items: center;
+  // align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin: 10% auto;
 
   .product {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .img {
-      width: 20%;
+    width: 20%;
+    height: 20%;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .img {
+        width: 90%;
+      }
+      h2 {
+        width: 100%;
+        text-align: left;
+      }
     }
   }
 }
