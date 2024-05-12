@@ -17,11 +17,23 @@ export default function Product({ product }) {
     );
   }
 
+  console.log(product.image);
+
   return (
     <Layout>
-      <Link href="/products">Back</Link>
-      <h1>{product.title}</h1>
-      <ReactMarkdown>{product.content}</ReactMarkdown>
+      <div className={styles.descPage}>
+        <Link href="/products" className={styles.back}>
+          back to products
+        </Link>
+        <div className={styles.productDesc}>
+          <img className={styles.img} src={`/${product.image}`} />
+          <div className={styles.desc}>
+            <h1>{product.title}</h1>
+            <h3>${product.price}</h3>
+            <ReactMarkdown>{product.content}</ReactMarkdown>
+          </div>
+        </div>
+      </div>
     </Layout>
   );
 }

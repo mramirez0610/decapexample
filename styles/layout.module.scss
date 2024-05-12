@@ -1,6 +1,9 @@
 .navbar {
   width: auto;
   height: 8vh;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background: rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
@@ -20,23 +23,7 @@
       a {
         text-decoration: none;
         color: black;
-        // position: relative;
-
-        // &::after {
-        //   content: "";
-        //   position: absolute;
-        //   width: 0;
-        //   height: 2px;
-        //   bottom: 0;
-        //   left: 0;
-        //   background-color: #000;
-        //   transition: width 0.3s;
-        // }
-
-        // &:hover::after {
-        //   width: 100%;
-        //   transition: width 20ms;
-        // }
+        font-weight: 600;
       }
     }
   }

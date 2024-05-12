@@ -24,7 +24,13 @@ export default function Products({ products }) {
 
   return (
     <Layout>
-      <h1>Products</h1>
+      <h1
+        style={{
+          fontSize: "1.8rem",
+        }}
+      >
+        products
+      </h1>
       <ProductList products={products} />
     </Layout>
   );
