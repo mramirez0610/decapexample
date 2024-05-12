@@ -14,7 +14,13 @@ export default function About() {
   return (
     <Layout>
       <article className={styles.about}>
-        <h1>{title}</h1>
+        <h1
+          style={{
+            fontSize: "1.8rem",
+          }}
+        >
+          {title}
+        </h1>
         <p>This is the about page</p>
         <div>
           <AboutContent />

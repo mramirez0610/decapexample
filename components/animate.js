@@ -13,7 +13,7 @@ export function animate(currentRoute, nextRoute) {
   } else if (currentRoute === "products" && nextRoute === "about") {
     endPosition = { top: "100vh", left: "100vw", scale: 1 };
   } else if (currentRoute === "products" && nextRoute === "productPage") {
-    endPosition = { top: "55vh", left: "50vw", scale: 4 };
+    endPosition = { top: "55vh", left: "50vw", scale: 3 };
   }
 
   if (!endPosition.scale) {
