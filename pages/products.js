@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 import { useEffect } from "react";
 import { animate } from "../components/animate";
 import ProductList from "../components/product/ProductList";
-import * as styles from "../styles/products.module.scss";
+// import * as styles from "../styles/products.module.scss";
 
 const productsDirectory = path.join(process.cwd(), "content", "products");
 
@@ -29,12 +29,13 @@ export default function Products({ products }) {
           fontSize: "1.8rem",
         }}
       >
-        products
+        our products
       </h1>
       <ProductList products={products} />
     </Layout>
   );
 }
+
 export async function getStaticProps() {
   // Get file names under /content/products
   const filenames = fs.readdirSync(productsDirectory);

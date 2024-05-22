@@ -6,13 +6,13 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       <ul>
         <li>
-          <Link href="/">Home</Link>
+          <Link href="/">home</Link>
         </li>
         <li>
-          <Link href="/products">Products</Link>
+          <Link href="/products">products</Link>
         </li>
         <li>
-          <Link href="/about">About</Link>
+          <Link href="/about">about</Link>
         </li>
       </ul>
     </nav>

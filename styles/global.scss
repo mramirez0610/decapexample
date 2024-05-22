@@ -33,22 +33,18 @@ p {
   border-radius: 50%;
   position: fixed;
   background-size: 200% 200%;
-  animation: gradient 20s ease infinite;
+  animation: gradient 10s ease infinite;
 }
 
 @keyframes gradient {
   0% {
     background-position: 150% 0;
   }
-  25% {
-    background-position: 100% 100%;
-  }
+
   50% {
     background-position: 0 100%;
   }
-  75% {
-    background-position: 100% 0;
-  }
+
   100% {
     background-position: 150% 0;
   }

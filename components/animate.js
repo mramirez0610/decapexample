@@ -13,7 +13,7 @@ export function animate(currentRoute, nextRoute) {
   } else if (currentRoute === "products" && nextRoute === "about") {
     endPosition = { top: "100vh", left: "100vw", scale: 1 };
   } else if (currentRoute === "products" && nextRoute === "productPage") {
-    endPosition = { top: "55vh", left: "50vw", scale: 3 };
+    endPosition = { top: "55vh", left: "50vw", scale: 3.2 };
   }
 
   if (!endPosition.scale) {
@@ -24,7 +24,8 @@ export function animate(currentRoute, nextRoute) {
     ...startPosition,
     ...endPosition,
     duration: 0.8,
-    ease: "expo.inOut",
+    ease: "power3",
+    delay: 0.1,
     transform: "translate(-50%, -50%)",
     onComplete: () => {
       lastPosition = { ...endPosition };

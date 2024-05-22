@@ -4,7 +4,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(240, 240, 245, 0.55);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   display: flex;
@@ -32,18 +32,32 @@
 .content {
   display: flex;
   justify-content: center;
-
-  position: relative;
   margin: 6% auto;
 
   .main {
     width: 85%;
-    background: rgba(255, 255, 255, 0.55);
+    background: rgba(240, 240, 245, 0.55);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     padding: 4%;
     border: 0.5px solid grey;
     position: relative;
     margin-bottom: 6%;
+  }
+}
+
+@media (max-width: 850px) {
+  .content {
+    margin: 10% auto;
+  }
+}
+
+@media (max-width: 850px) {
+  .content {
+    margin: 15% auto;
+
+    .main {
+      width: 90%;
+    }
   }
 }

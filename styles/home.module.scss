@@ -1,7 +1,7 @@
 .home {
   display: flex;
-  width: 95%;
   justify-content: space-between;
+  margin: 0 auto;
 
   .img {
     width: 60%;
@@ -10,12 +10,15 @@
 
   .content {
     width: 35%;
+    .homeInfo {
+      line-height: 1.6rem;
+    }
   }
 }
 
 @media (max-width: 768px) {
   .home {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
 
     .img {

@@ -14,11 +14,19 @@ export default function Home() {
   return (
     <Layout>
       <article className={styles.home}>
-        <img className={styles.img} src={img} alt="" />
         <div className={styles.content}>
-          <h1>{title}</h1>
-          <HomeContent />
+          <h1
+            style={{
+              fontSize: "1.8rem",
+            }}
+          >
+            {title}
+          </h1>
+          <div className={styles.homeInfo}>
+            <HomeContent />
+          </div>
         </div>
+        <img className={styles.img} src={img} alt="" />
       </article>
     </Layout>
   );

@@ -17,14 +17,12 @@ export default function Product({ product }) {
     );
   }
 
-  console.log(product.image);
-
   return (
     <Layout>
+      <Link href="/products" className={styles.back}>
+        back to products
+      </Link>
       <div className={styles.descPage}>
-        <Link href="/products" className={styles.back}>
-          back to products
-        </Link>
         <div className={styles.productDesc}>
           <img className={styles.img} src={`/${product.image}`} />
           <div className={styles.desc}>

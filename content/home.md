@@ -1,5 +1,5 @@
 ---
-title: Satoshi Font
+title: satoshi font
 date: 2019-03-17T19:31:20.591Z
 img: "https://as2.ftcdn.net/v2/jpg/05/88/85/49/1000_F_588854930_Fs7YX6QysTIVOF888nR4dwVX3SKRpcU7.jpg"
 ---
