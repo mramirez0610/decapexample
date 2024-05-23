@@ -5,6 +5,7 @@ import Layout from "../../components/layout";
 import ReactMarkdown from "react-markdown";
 import * as styles from "../../styles/products.module.scss";
 import Link from "next/link";
+import Image from "next/image";
 
 const productsDirectory = path.join(process.cwd(), "content", "products");
 
@@ -24,7 +25,14 @@ export default function Product({ product }) {
       </Link>
       <div className={styles.descPage}>
         <div className={styles.productDesc}>
-          <img className={styles.img} src={`/${product.image}`} />
+          <Image
+            src={`/${product.image}`}
+            alt={product.title}
+            className={styles.img} // apply your class
+            width={500} // replace with your desired width
+            height={500} // replace with your desired height
+            layout="responsive"
+          />
           <div className={styles.desc}>
             <h1>{product.title}</h1>
             <h3>${product.price}</h3>
