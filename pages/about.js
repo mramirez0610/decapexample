@@ -5,7 +5,7 @@ import { animate } from "../components/animate";
 import * as styles from "../styles/about.module.scss";
 
 export default function About() {
-  let { title, tests } = attributes;
+  let { title } = attributes;
 
   useEffect(() => {
     animate("products", "about");

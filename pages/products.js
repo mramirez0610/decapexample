@@ -27,6 +27,7 @@ export default function Products({ products }) {
       <h1
         style={{
           fontSize: "1.8rem",
+          marginBottom: "2.5rem",
         }}
       >
         our products
