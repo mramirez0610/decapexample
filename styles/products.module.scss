@@ -17,9 +17,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      height: 100%;
       text-decoration: none;
-      color: black;
+      color: #1a1616;
 
       .img {
         width: 90%;
@@ -42,7 +41,7 @@
 
 .back {
   text-decoration: none;
-  color: black;
+  color: #1a1616;
   font-weight: 600;
   font-size: 1.8rem;
 }
@@ -54,8 +53,8 @@
   .productDesc {
     display: flex;
     justify-content: space-evenly;
-    gap: 5%;
     margin: 5% auto;
+    gap: 5%;
 
     .img {
       width: 45% !important;
@@ -74,7 +73,7 @@
     .product {
       a {
         .img {
-          width: 90%;
+          width: 90% !important;
         }
       }
     }

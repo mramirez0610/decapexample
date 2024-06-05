@@ -9,4 +9,4 @@ this website was created using Decap CMS and Next.Js. Decap is a headless CMS th
 
 ### how can i get me one of these?
 
-if you'd like to test the interface out, let me know! i'm here to give you a quick tour of how everything works, and how it can perhaps benefit you in any small projects you've been working on. ideally, this would be a freelance service that i can market, and hopefully help market someone's passion product/project.
+if you'd like to test the interface out, let me know! i'm here to give you a quick tour of how everything works, and how it could benefit you with any small projects you've been working on. ideally, this would be a freelance service that i can market, and hopefully help market someone's passion product/project.

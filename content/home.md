@@ -1,7 +1,13 @@
 ---
-title: satoshi font
+title: headless cms!
 date: 2019-03-17T19:31:20.591Z
 img: "https://as2.ftcdn.net/v2/jpg/05/88/85/49/1000_F_588854930_Fs7YX6QysTIVOF888nR4dwVX3SKRpcU7.jpg"
 ---
 
-Satoshi is a modern and elegant typeface that has been gaining popularity among designers and typographers. Named after Satoshi Nakamoto, this font embodies a blend of technological sophistication and sleek design. Its clean lines and balanced proportions make it highly readable, while its minimalist aesthetic lends a contemporary feel. Satoshi is versatile and can be used in a variety of contexts, from digital interfaces to print media. Its distinctive character set and unique design details make it stand out, while its wide range of weights and styles make it adaptable to many design scenarios. Whether you're designing a website, creating a logo, or crafting a print publication, Satoshi offers a fresh and modern typographic solution.
+### what are you talking about?
+
+a headless cms is a content management system that doesn't have a front end. it's just a database that you can use to store and manage content. you can then use that content in any way you want, like in a website or an app. this site is an example of a headless cms. the content is stored in a database, and the site is built using that content. the site is built using a headless cms called [decap cms](https://decapcms.org/).
+
+### why should i care?
+
+because it's neat! imagine this scenario: you paid someone to make you a website, and now you want to update it. you have to go into the code, make the changes, and then deploy the site. if you're not doing that, you have to contact the person who made this website for you, and ask them to change a paragraph or two. with a headless cms, you (the client) can update the content in the cms without even messing with the source code, and the changes will be reflected on the site. no need to touch the code. it's quick, it's efficient.
