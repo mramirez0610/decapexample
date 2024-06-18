@@ -11,6 +11,8 @@ export default function Home() {
     animate(null, "home");
   }, []);
 
+  console.log("image", img);
+
   return (
     <Layout>
       <article className={styles.home}>

@@ -28,9 +28,9 @@ export default function Product({ product }) {
           <Image
             src={`/${product.image}`}
             alt={product.title}
-            className={styles.img} // apply your class
-            width={0} // replace with your desired width
-            height={0} // replace with your desired height
+            className={styles.img}
+            width={0}
+            height={0}
             layout="responsive"
           />
           <div className={styles.desc}>
