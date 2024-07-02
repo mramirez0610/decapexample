@@ -1,7 +1,6 @@
 ---
 title: headless cms!
 date: 2024-06-18T13:36:00.000Z
-img: https://as2.ftcdn.net/v2/jpg/05/88/85/49/1000_F_588854930_Fs7YX6QysTIVOF888nR4dwVX3SKRpcU7.jpg
 image: img/home1.jpeg
 ---
 

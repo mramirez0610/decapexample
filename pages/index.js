@@ -5,13 +5,13 @@ import { attributes, react as HomeContent } from "../content/home.md";
 import * as styles from "../styles/home.module.scss";
 
 export default function Home() {
-  let { title, img } = attributes;
+  let { title, image } = attributes;
 
   useEffect(() => {
     animate(null, "home");
   }, []);
 
-  console.log("image", img);
+  console.log("image", image);
 
   return (
     <Layout>
@@ -28,7 +28,7 @@ export default function Home() {
             <HomeContent />
           </div>
         </div>
-        <img className={styles.img} src={img} alt="" />
+        <img className={styles.img} src={image} alt="" />
       </article>
     </Layout>
   );
