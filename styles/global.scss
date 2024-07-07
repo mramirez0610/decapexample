@@ -20,13 +20,9 @@ p {
   margin-bottom: 16px;
 }
 .green {
-  background: radial-gradient(
-    circle,
-    #216af1,
-    #007cf0,
-    rgb(131, 106, 169),
-    #6a0dad
-  );
+  background-color: #44b09e;
+  background-image: radial-gradient(circle, #44b09e 0%, #e0d2c7 74%);
+
   filter: blur(30px);
   width: 600px;
   height: 600px;
