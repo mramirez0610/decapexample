@@ -15,3 +15,5 @@ because it's neat! imagine this scenario: you paid someone to make you a website
 ## made using decap cms and next.js
 
 ### a more personal alternative to other content management systems
+
+### wanna know more? [click here](https://decapcms.org/)
