@@ -32,17 +32,15 @@
 .content {
   display: flex;
   justify-content: center;
-  margin: 6% auto;
+  margin: 0 auto;
+  opacity: 0;
+  animation: fadeIn 800ms forwards;
 
   .main {
     width: 85%;
-    background: rgba(240, 240, 245, 0.55);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    // maybe remove padding eventually
     padding: 4%;
-    border: 0.5px solid grey;
     position: relative;
-    margin-bottom: 6%;
   }
 }
 
@@ -60,5 +58,14 @@
       width: 95%;
       padding: 10% 6%;
     }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

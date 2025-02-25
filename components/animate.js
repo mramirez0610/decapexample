@@ -7,11 +7,11 @@ export function animate(currentRoute, nextRoute) {
   let endPosition = { ...lastPosition };
 
   if (!currentRoute && nextRoute === "home") {
-    endPosition = { top: "100vh", left: "0vw", scale: 1 };
+    endPosition = { top: "80vh", left: "90vw", scale: 1 };
   } else if (currentRoute === "home" && nextRoute === "products") {
     endPosition = { top: "55vh", left: "50vw", scale: 1 };
   } else if (currentRoute === "products" && nextRoute === "about") {
-    endPosition = { top: "100vh", left: "100vw", scale: 1 };
+    endPosition = { top: "80vh", left: "10vw", scale: 1 };
   } else if (currentRoute === "products" && nextRoute === "productPage") {
     endPosition = { top: "55vh", left: "50vw", scale: 3.2 };
   }

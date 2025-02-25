@@ -2,6 +2,7 @@ import Layout from "../components/layout";
 import { useEffect } from "react";
 import { animate } from "../components/animate";
 import { attributes, react as HomeContent } from "../content/home.md";
+import Link from "next/link";
 import * as styles from "../styles/home.module.scss";
 
 export default function Home() {
@@ -11,24 +12,24 @@ export default function Home() {
     animate(null, "home");
   }, []);
 
-  console.log("image", image);
-
   return (
     <Layout>
       <article className={styles.home}>
         <div className={styles.content}>
-          <h1
-            style={{
-              fontSize: "1.8rem",
-            }}
-          >
-            {title}
-          </h1>
+          <div className={styles.title}>{title}</div>
           <div className={styles.homeInfo}>
             <HomeContent />
+
+            <div className={styles.buttons}>
+              <Link className={styles.button} href="/about">
+                Learn More
+              </Link>
+              <Link className={styles.button} href="/products">
+                View our Products
+              </Link>
+            </div>
           </div>
         </div>
-        <img className={styles.img} src={image} alt="" />
       </article>
     </Layout>
   );

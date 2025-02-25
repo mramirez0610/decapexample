@@ -20,20 +20,20 @@ p {
   margin-bottom: 16px;
 }
 .green {
-  background-color: #44b09e;
-  background-image: radial-gradient(circle, #44b09e 0%, #e0d2c7 74%);
+  background-image: radial-gradient(circle, #5078f2 0%, #efe9f4 74%);
+
   filter: blur(30px);
-  width: 600px;
-  height: 600px;
+  width: 800px;
+  height: 800px;
   border-radius: 50%;
   position: fixed;
   background-size: 200% 200%;
-  animation: gradient 10s ease infinite;
+  animation: gradient 10s ease infinite, breathing 10s ease-in-out infinite;
 }
 
 @keyframes gradient {
   0% {
-    background-position: 150% 0;
+    background-position: 100% 0;
   }
 
   50% {
@@ -41,6 +41,17 @@ p {
   }
 
   100% {
-    background-position: 150% 0;
+    background-position: 100% 0;
+  }
+}
+
+@keyframes breathing {
+  0%,
+  100% {
+    background-size: 200% 200%;
+  }
+
+  50% {
+    background-size: 220% 220%;
   }
 }

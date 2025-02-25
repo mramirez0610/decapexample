@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 import { useEffect } from "react";
 import { animate } from "../components/animate";
 import ProductList from "../components/product/ProductList";
-// import * as styles from "../styles/products.module.scss";
+import * as styles from "../styles/products.module.scss";
 
 const productsDirectory = path.join(process.cwd(), "content", "products");
 
@@ -24,14 +24,7 @@ export default function Products({ products }) {
 
   return (
     <Layout>
-      <h1
-        style={{
-          fontSize: "1.8rem",
-          marginBottom: "2.5rem",
-        }}
-      >
-        our products
-      </h1>
+      <h1 className={styles.title}>our products</h1>
       <ProductList products={products} />
     </Layout>
   );
