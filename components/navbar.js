@@ -14,6 +14,9 @@ export default function Navbar() {
         <li>
           <Link href="/about">about</Link>
         </li>
+        <li className={styles.admin}>
+          <Link href="https://n413-final.netlify.app/admin">admin</Link>
+        </li>
       </ul>
     </nav>
   );
