@@ -5,6 +5,8 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+
+  font-family: "Excon", sans-serif;
 }
 
 .productList {
@@ -55,10 +57,11 @@
         opacity: 0;
         transition: opacity 400ms, visibility 0s 400ms;
         visibility: hidden;
-        width: 100%;
+        width: 200%;
 
         position: absolute;
         bottom: 0;
+        left: 0;
 
         h2,
         h4 {
