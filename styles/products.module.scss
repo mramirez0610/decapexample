@@ -5,8 +5,6 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-
-  font-family: "Excon", sans-serif;
 }
 
 .productList {
@@ -71,6 +69,16 @@
           width: 100%;
           text-align: left;
         }
+
+        .price {
+        }
+        .author {
+        }
+        .title {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: #1a1616;
+        }
       }
     }
   }
@@ -98,6 +106,25 @@
     }
     .desc {
       width: 45%;
+    }
+    .button {
+      display: inline-block;
+      min-width: 15%;
+      font-size: 1em;
+      padding: 1.5% 3%;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 20px;
+      color: #f5f4e9;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      font-weight: 400;
+
+      background-image: linear-gradient(0deg, #4169e1 0%, #89cff0 100%);
+      box-shadow: #4169e1 0px 2px 6px 0px;
+      background-size: 150%;
+
+      transition: all 200ms ease-in-out;
     }
   }
 }

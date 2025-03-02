@@ -20,8 +20,9 @@ export default function ProductItem({ product }) {
           />
         </div>
         <div className={styles.info}>
-          <h4>${product.price}</h4>
-          <h2>{product.title}</h2>
+          <h4 className={styles.price}>${product.price}</h4>
+          <h4 className={styles.author}>{product.author}</h4>
+          <h2 className={styles.title}>{product.title}</h2>
         </div>
       </Link>
     </div>

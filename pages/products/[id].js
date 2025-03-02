@@ -35,8 +35,11 @@ export default function Product({ product }) {
           />
           <div className={styles.desc}>
             <h1>{product.title}</h1>
+            <h3>{product.author}</h3>
             <h3>${product.price}</h3>
             <ReactMarkdown>{product.content}</ReactMarkdown>
+
+            <div className={styles.button}>Add to Cart</div>
           </div>
         </div>
       </div>
