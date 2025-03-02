@@ -6,10 +6,16 @@ import ReactMarkdown from "react-markdown";
 import * as styles from "../../styles/products.module.scss";
 import Link from "next/link";
 import Image from "next/image";
+import { useCart } from "../../context/CartContext";
 
 const productsDirectory = path.join(process.cwd(), "content", "products");
 
 export default function Product({ product }) {
+  const { addItem } = useCart();
+  const handleAddItem = () => {
+    addItem(product);
+  };
+
   if (!product) {
     return (
       <Layout>
@@ -39,7 +45,9 @@ export default function Product({ product }) {
             <h3>${product.price}</h3>
             <ReactMarkdown>{product.content}</ReactMarkdown>
 
-            <div className={styles.button}>Add to Cart</div>
+            <div className={styles.button} onClick={handleAddItem}>
+              Add to Cart
+            </div>
           </div>
         </div>
       </div>
