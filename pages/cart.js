@@ -48,10 +48,13 @@ export default function Cart() {
           )}
         </div>
         <div className={styles.total}>
-          <h1>total</h1>
-          <h3>
-            ${cart.reduce((acc, item) => acc + item.price * item.quantity, 0)}
-          </h3>
+          <h1>
+            total: $
+            {cart.reduce((acc, item) => acc + item.price * item.quantity, 0)}
+          </h1>
+          <div className={styles.button}>
+            <Link href="/checkout">checkout</Link>
+          </div>
         </div>
       </div>
     </Layout>
