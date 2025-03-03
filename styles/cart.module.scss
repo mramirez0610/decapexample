@@ -1,2 +1,22 @@
 .cart {
+  .items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    width: 60%;
+  }
+
+  .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 60%;
+    margin-top: 2%;
+  }
 }

@@ -3,6 +3,8 @@ import { createContext, useState, useEffect, useContext } from "react";
 const CartContext = createContext();
 
 export function CartProvider({ children }) {
+  //useContext is so sweet
+
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
@@ -17,30 +19,32 @@ export function CartProvider({ children }) {
   }, [cart]);
 
   const addItem = (item) => {
-    const inCart = cart.find((item) => item.id === item.id);
+    const inCart = cart.find((cartItem) => cartItem.id === item.id);
 
     // crazy ternary operator practice
     setCart(
       inCart
-        ? cart.map((item) =>
-            item.id === item.id
-              ? { ...item, quantity: item.quantity + 1 }
-              : item
+        ? cart.map((cartItem) =>
+            cartItem.id === item.id
+              ? { ...cartItem, quantity: cartItem.quantity + 1 }
+              : cartItem
           )
         : [...cart, { ...item, quantity: 1 }]
     );
   };
 
   const removeItem = (id) => {
-    const inCart = cart.find((item) => item.id === id);
+    const inCart = cart.find((cartItem) => cartItem.id === id);
 
     // ternary operators look kinda gross
     setCart(
       inCart.quantity > 1
-        ? cart.map((item) =>
-            item.id === id ? { ...item, quantity: item.quantity - 1 } : item
+        ? cart.map((cartItem) =>
+            cartItem.id === id
+              ? { ...cartItem, quantity: cartItem.quantity - 1 }
+              : cartItem
           )
-        : cart.filter((item) => item.id !== id)
+        : cart.filter((cartItem) => cartItem.id !== id)
     );
 
     /*

@@ -17,34 +17,42 @@ export default function Cart() {
   return (
     <Layout>
       <div className={styles.cart}>
-        <Link href="/products" className={styles.back}>
-          back to products
-        </Link>
-        <h1>Cart</h1>
-        {cart.length === 0 ? (
-          <div>your cart is empty</div>
-        ) : (
-          <div>
-            {cart.map((item) => (
-              <div key={item.id} className={styles.item}>
-                <div className={styles.desc}>
-                  <h3>{item.title}</h3>
-                  <h3>${item.price}</h3>
-                  <h3>quantity: {item.quantity}</h3>
+        <div className={styles.items}>
+          <Link href="/products" className={styles.back}>
+            back to products
+          </Link>
+          <h1>Cart</h1>
+          {cart.length === 0 ? (
+            <div>your cart is empty</div>
+          ) : (
+            <div>
+              {cart.map((item) => (
+                <div key={item.id} className={styles.item}>
+                  <div className={styles.desc}>
+                    <h3>{item.title}</h3>
+                    <h3>${item.price}</h3>
+                    <h3>quantity: {item.quantity}</h3>
+                  </div>
+                  <div
+                    className={styles.button}
+                    onClick={() => handleRemoveItem(item.id)}
+                  >
+                    move to trash
+                  </div>
                 </div>
-                <div
-                  className={styles.button}
-                  onClick={() => handleRemoveItem(item.id)}
-                >
-                  move to trash
-                </div>
+              ))}
+              <div className={styles.button} onClick={handleClearCart}>
+                clear it all
               </div>
-            ))}
-            <div className={styles.button} onClick={handleClearCart}>
-              clear it all
             </div>
-          </div>
-        )}
+          )}
+        </div>
+        <div className={styles.total}>
+          <h1>total</h1>
+          <h3>
+            ${cart.reduce((acc, item) => acc + item.price * item.quantity, 0)}
+          </h3>
+        </div>
       </div>
     </Layout>
   );

@@ -17,6 +17,9 @@ export default function Navbar() {
         <li className={styles.admin}>
           <Link href="https://decapexample.netlify.app/admin">admin</Link>
         </li>
+        <li>
+          <Link href="/cart">cart</Link>
+        </li>
       </ul>
     </nav>
   );
