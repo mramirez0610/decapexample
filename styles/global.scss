@@ -33,6 +33,17 @@ p {
   animation: gradient 10s ease infinite, breathing 10s ease-in-out infinite;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1616;
+    color: #faf4f5;
+  }
+
+  .green {
+    background-image: radial-gradient(circle, #5078f2 0%, #1a1616 74%);
+  }
+}
+
 @keyframes gradient {
   0% {
     background-position: 100% 0;

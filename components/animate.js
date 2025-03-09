@@ -14,6 +14,8 @@ export function animate(currentRoute, nextRoute) {
     endPosition = { top: "80vh", left: "10vw", scale: 1 };
   } else if (currentRoute === "products" && nextRoute === "productPage") {
     endPosition = { top: "55vh", left: "50vw", scale: 3.2 };
+  } else if (currentRoute === "products" && nextRoute === "cart") {
+    endPosition = { top: "70vh", left: "30vw", scale: 1.5 };
   }
 
   if (!endPosition.scale) {

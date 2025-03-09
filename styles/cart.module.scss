@@ -18,4 +18,49 @@
 
     width: 40%;
   }
+
+  .back {
+    margin-bottom: 20px;
+
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .empty {
+    font-size: 1.5rem;
+    color: red;
+  }
+
+  .item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .desc {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .button {
+    margin-top: 10px;
+    padding: 10px;
+
+    color: black;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .totalTitle {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
 }

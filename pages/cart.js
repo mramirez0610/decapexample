@@ -2,9 +2,15 @@ import { useCart } from "../context/CartContext";
 import Layout from "../components/layout";
 import Link from "next/link";
 import * as styles from "../styles/cart.module.scss";
+import { useEffect } from "react";
+import { animate } from "../components/animate";
 
 export default function Cart() {
   const { cart, addItem, removeItem, clearCart } = useCart();
+
+  useEffect(() => {
+    animate("products", "cart");
+  }, []);
 
   const handleRemoveItem = (id) => {
     removeItem(id);
@@ -21,9 +27,9 @@ export default function Cart() {
           <Link href="/products" className={styles.back}>
             back to products
           </Link>
-          <h1>Cart</h1>
+          <h1 className={styles.title}>Cart</h1>
           {cart.length === 0 ? (
-            <div>your cart is empty</div>
+            <div className={styles.empty}>your cart is empty</div>
           ) : (
             <div>
               {cart.map((item) => (
@@ -48,7 +54,7 @@ export default function Cart() {
           )}
         </div>
         <div className={styles.total}>
-          <h1>
+          <h1 className={styles.totalTitle}>
             total: $
             {cart.reduce((acc, item) => acc + item.price * item.quantity, 0)}
           </h1>
