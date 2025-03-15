@@ -44,28 +44,15 @@
   animation: fadeIn 800ms forwards;
 
   .main {
-    width: 85%;
+    width: 90%;
     // maybe remove padding eventually
     padding: 4%;
     position: relative;
+    height: auto;
   }
 }
 
 @media (max-width: 850px) {
-  .content {
-    margin: 10% auto;
-  }
-}
-
-@media (max-width: 850px) {
-  .content {
-    margin: 15% auto;
-
-    .main {
-      width: 95%;
-      padding: 10% 6%;
-    }
-  }
 }
 
 @keyframes fadeIn {

@@ -1,5 +1,6 @@
 ---
-title: no coding, all content
+title: "Manage your website easily."
+subtitle: "Your content, your control."  
 date: 2024-06-18T13:36:00.000Z
 image: img/home1.jpeg
 test: "### what are you talking about?
@@ -12,8 +13,6 @@ because it's neat! imagine this scenario: you paid someone to make you a website
 
 ---
 
-## made using decap cms and next.js
+### Made using Decap CMS, a more personal alternative to other content management systems.
 
-### a more personal alternative to other content management systems
-
-### wanna know more? [click here](https://decapcms.org/)
+### Click below to learn what's going on here.

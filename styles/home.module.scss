@@ -1,9 +1,18 @@
 .home {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
+  width: 100%;
+  margin-top: 6%;
 
   .title {
+    font-size: 3.75rem;
+    font-weight: 500;
+    background-image: linear-gradient(80deg, #4169e1 0%, #89cff0 75%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: "Excon", sans-serif;
+  }
+
+  .subtitle {
     font-size: 3.75rem;
     font-weight: 500;
     margin-bottom: 2%;
@@ -15,45 +24,41 @@
     font-family: "Excon", sans-serif;
   }
 
-  .content {
-    width: 100%;
-    margin-top: 6%;
-    .homeInfo {
-      line-height: 1.6rem;
+  .homeInfo {
+    line-height: 1.6rem;
 
-      .buttons {
-        width: 100%;
-        display: flex;
-        justify-content: flex-start;
-        margin-top: 3%;
-        gap: 2%;
+    .buttons {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 3%;
+      gap: 2%;
 
-        .button {
-          display: inline-block;
-          min-width: 15%;
-          font-size: 1em;
-          padding: 1.5% 3%;
-          text-align: center;
-          text-decoration: none;
-          border-radius: 20px;
-          color: #f5f4e9;
-          letter-spacing: 0.5px;
-          font-weight: 400;
+      .button {
+        display: inline-block;
+        min-width: 15%;
+        font-size: 1em;
+        padding: 1.5% 3%;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 20px;
+        color: #f5f4e9;
+        letter-spacing: 0.5px;
+        font-weight: 400;
 
-          background-image: linear-gradient(0deg, #4169e1 0%, #89cff0 100%);
-          box-shadow: #4169e1 0px 2px 6px 0px;
-          background-size: 150%;
+        background-image: linear-gradient(0deg, #4169e1 0%, #89cff0 100%);
+        box-shadow: #4169e1 0px 2px 6px 0px;
+        background-size: 150%;
 
+        transition: all 200ms ease-in-out;
+
+        &:hover {
+          scale: 1.05;
           transition: all 200ms ease-in-out;
 
-          &:hover {
-            scale: 1.05;
-            transition: all 200ms ease-in-out;
+          background-size: 200%;
 
-            background-size: 200%;
-
-            box-shadow: #4169e1 2px 4px 8px 2px;
-          }
+          box-shadow: #4169e1 2px 4px 8px 2px;
         }
       }
     }
@@ -62,15 +67,35 @@
 
 @media (max-width: 850px) {
   .home {
-    flex-direction: column-reverse;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 
-    .img {
-      width: 100%;
+    .title {
+      font-size: 2.75em;
     }
 
-    .content {
-      width: 100%;
+    .subtitle {
+      font-size: 2.5em;
+    }
+
+    .homeInfo {
+      .buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 20%;
+        height: 25vh;
+
+        .button {
+          width: 80%;
+          height: 30%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.25em;
+        }
+      }
     }
   }
 }
