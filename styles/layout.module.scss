@@ -34,6 +34,15 @@
       }
     }
   }
+
+  .mobileButton {
+    display: none;
+    background: none;
+    color: #faf4f5;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
 }
 
 .content {
@@ -53,6 +62,44 @@
 }
 
 @media (max-width: 850px) {
+  .navbar {
+    justify-content: flex-end;
+
+    .mobileButton {
+      display: block;
+      position: relative;
+      z-index: 1001;
+    }
+
+    ul {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      width: 100%;
+
+      li {
+        width: 100%;
+        text-align: left;
+      }
+    }
+
+    .mobileOpen {
+      margin: 0;
+      background-color: red;
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      li {
+        text-align: center;
+      }
+    }
+  }
 }
 
 @keyframes fadeIn {

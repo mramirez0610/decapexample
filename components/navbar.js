@@ -1,10 +1,21 @@
 import Link from "next/link";
+import { useState } from "react";
 import * as styles from "../styles/layout.module.scss";
 
 export default function Navbar() {
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
+
+  const handleMobile = () => {
+    setIsMobileOpen(!isMobileOpen);
+  };
+
   return (
     <nav className={styles.navbar}>
-      <ul>
+      <button className={styles.mobileButton} onClick={handleMobile}>
+        {/* change mobile menu to close if true. */}
+        {isMobileOpen ? "X" : "Menu"}
+      </button>
+      <ul className={isMobileOpen ? styles.mobileOpen : ""}>
         <li>
           <Link href="/">home</Link>
         </li>
