@@ -15,4 +15,4 @@ because it's neat! imagine this scenario: you paid someone to make you a website
 
 ### Made using Decap CMS, a more personal alternative to other content management systems.
 
-### Click below to learn what's going on here.
+### Click below to learn more about what's going on here.

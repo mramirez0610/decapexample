@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import * as styles from "../styles/layout.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -12,10 +14,17 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <button className={styles.mobileButton} onClick={handleMobile}>
-        {/* change mobile menu to close if true. */}
-        {isMobileOpen ? "X" : "Menu"}
+        {isMobileOpen ? (
+          <FontAwesomeIcon icon={faTimes} />
+        ) : (
+          <FontAwesomeIcon icon={faBars} />
+        )}
       </button>
-      <ul className={isMobileOpen ? styles.mobileOpen : ""}>
+      <ul
+        className={`${styles.mobile} ${
+          isMobileOpen ? styles.mobileOpen : styles.mobileClose
+        }`}
+      >
         <li>
           <Link href="/">home</Link>
         </li>

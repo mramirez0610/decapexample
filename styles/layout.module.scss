@@ -15,13 +15,16 @@
     gap: 3%;
     width: 85%;
     height: 100%;
+
     li {
       list-style: none;
+
       a {
         text-decoration: none;
         color: #1a1616;
         font-weight: 600;
         transition: 300ms;
+        font-size: 1.25rem;
 
         &:hover {
           cursor: pointer;
@@ -40,7 +43,7 @@
     background: none;
     color: #faf4f5;
     border: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
     cursor: pointer;
   }
 }
@@ -63,7 +66,8 @@
 
 @media (max-width: 850px) {
   .navbar {
-    justify-content: flex-end;
+    justify-content: flex-start;
+    margin-left: 5%;
 
     .mobileButton {
       display: block;
@@ -72,11 +76,10 @@
     }
 
     ul {
-      display: none;
+      display: flex;
       flex-direction: column;
       align-items: flex-start;
       gap: 1rem;
-      width: 100%;
 
       li {
         width: 100%;
@@ -84,20 +87,28 @@
       }
     }
 
-    .mobileOpen {
-      margin: 0;
-      background-color: red;
+    .mobile {
+      background-color: rgba(0, 0, 0, 0.75);
       display: flex;
       height: 100vh;
       width: 100vw;
       justify-content: center;
       position: fixed;
+      padding: 0 10%;
       top: 0;
       left: 0;
+      opacity: 0;
+      transition: opacity 600ms ease;
+    }
 
-      li {
-        text-align: center;
-      }
+    .mobileOpen {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .mobileClose {
+      opacity: 0;
+      pointer-events: none;
     }
   }
 }
