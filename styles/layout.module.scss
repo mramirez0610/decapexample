@@ -41,7 +41,7 @@
   .mobileButton {
     display: none;
     background: none;
-    color: #faf4f5;
+    color: #1a1616;
     border: none;
     font-size: 2rem;
     cursor: pointer;
@@ -104,6 +104,12 @@
     .mobileOpen {
       opacity: 1;
       pointer-events: auto;
+
+      li {
+        a {
+          color: #faf4f5;
+        }
+      }
     }
 
     .mobileClose {
@@ -124,12 +130,27 @@
 
 @media (prefers-color-scheme: dark) {
   .navbar {
+    .mobileOpen {
+      opacity: 1;
+      pointer-events: auto;
+
+      li {
+        a {
+          color: #1a1616;
+        }
+      }
+    }
+
     ul {
       li {
         a {
           color: #faf4f5;
         }
       }
+    }
+
+    .mobileButton {
+      color: #faf4f5;
     }
   }
 
