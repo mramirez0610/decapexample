@@ -101,8 +101,20 @@
     margin: 5% auto;
     gap: 5%;
 
-    .img {
-      width: 45% !important;
+    .imageContainer {
+      position: relative;
+      width: 100%;
+
+      flex-basis: 55%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+      .img {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+      }
     }
     .desc {
       width: 45%;

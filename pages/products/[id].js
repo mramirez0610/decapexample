@@ -31,14 +31,17 @@ export default function Product({ product }) {
       </Link>
       <div className={styles.descPage}>
         <div className={styles.productDesc}>
-          <Image
-            src={`/${product.image}`}
-            alt={product.title}
-            className={styles.img}
-            width={0}
-            height={0}
-            layout="responsive"
-          />
+          <div className={styles.imageContainer}>
+            <Image
+              src={`/${product.image}`}
+              alt={product.title}
+              className={styles.img}
+              width={500}
+              height={500}
+              objectFit="contain"
+            />
+          </div>
+
           <div className={styles.desc}>
             <h1>{product.title}</h1>
             <h3>{product.author}</h3>
