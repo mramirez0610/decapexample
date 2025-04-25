@@ -152,23 +152,30 @@
 
     .product {
       width: 100%;
-      margin-bottom: 10%;
+      margin-bottom: 15%;
 
       &:hover {
         width: 100%;
       }
 
       a {
-        .imgContainer {
+        .imageContainer {
+          position: relative;
+          width: 100%;
+
           .img {
+            object-fit: cover;
+            width: 100%;
+            height: auto;
           }
         }
         .info {
           width: 100%;
-          margin-top: 20%;
+          height: auto;
+          max-height: 80px;
+
           opacity: 100%;
           visibility: visible;
-          background-color: rgba($color: #f5f4e0, $alpha: 0.6);
 
           h2,
           h4 {

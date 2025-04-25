@@ -1,12 +1,31 @@
 import * as styles from "../../styles/products.module.scss";
 import { animate } from "../animate";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function ProductItem({ product }) {
+  const [windowWidth, setWindowWidth] = useState({ width: 0 });
+
   const handleClick = () => {
     animate("products", "productPage");
   };
+
+  useEffect(() => {
+    const resize = () => {
+      setWindowWidth({ width: window.innerWidth });
+    };
+
+    resize();
+
+    window.addEventListener("resize", resize);
+
+    return () => {
+      window.removeEventListener("resize", resize);
+    };
+  }, []);
+
+  const mobileScreen = windowWidth.width <= 650;
 
   return (
     <div className={styles.product}>
@@ -16,7 +35,10 @@ export default function ProductItem({ product }) {
             src={`/${product.image}`}
             alt={product.title}
             className={styles.img}
-            fill={true}
+            fill={!mobileScreen}
+            width={mobileScreen ? 500 : undefined}
+            height={mobileScreen ? 500 : undefined}
+            objectFit={mobileScreen ? "contain" : undefined}
           />
         </div>
         <div className={styles.info}>
