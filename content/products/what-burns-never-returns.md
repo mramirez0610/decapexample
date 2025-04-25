@@ -1,5 +1,6 @@
 ---
 title: what burns never returns
+author: don caballero
 image: img/don-caballero-what-burns-never-returns.jpg
 description: don caballero album
 price: 20

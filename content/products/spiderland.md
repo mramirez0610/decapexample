@@ -1,5 +1,6 @@
 ---
 title: spiderland
+author: slint
 image: img/slint-spiderland-cover.jpg
 description: spiderland album
 price: 25
